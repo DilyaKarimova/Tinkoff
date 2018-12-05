@@ -3,6 +3,7 @@ import ru.itpark.СashbackService;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+
 class СashbackServiceTest {
 
     @Test
