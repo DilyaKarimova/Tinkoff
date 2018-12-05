@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.Test;
 import ru.itpark.СashbackService;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 class СashbackServiceTest {
 
     @Test
@@ -9,27 +11,27 @@ class СashbackServiceTest {
             СashbackService cashbackService = new СashbackService();
             int cashback = cashbackService.calculateCashback
                     (2000, 0, 0);
-            System.out.println(cashback);
+            assertEquals(20, cashback);
         }
 
         {
             СashbackService cashbackService = new СashbackService();
             int cashback = cashbackService.calculateCashback
                     (0, 5000, 0);
-            System.out.println(cashback);
+            assertEquals(250, cashback);
         }
 
         {
             СashbackService cashbackService = new СashbackService();
             int cashback = cashbackService.calculateCashback
                     (0, 0, 8_000);
-            System.out.println(cashback);
+            assertEquals(2_400, cashback);
         }
         {
             СashbackService cashbackService = new СashbackService();
             int cashback = cashbackService.calculateCashback
                     (0, 0, 1_300_000);
-            System.out.println(cashback);
+            assertEquals(3_000, cashback);
         }
 
     }
